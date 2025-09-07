@@ -1,0 +1,21 @@
+{
+  "name": "pixell-river-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite pixell-river-react",
+    "build": "tsc && vite build pixell-river-react",
+    "preview": "vite preview pixell-river-react"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "@types/react": "^18.0.39",
+    "@types/react-dom": "^18.0.11"
+  }
+}
