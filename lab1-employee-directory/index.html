@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pixell River Financial — Employee Directory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <!-- Small inline SVG logo (keeps repo self-contained) -->
+        <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect x="4" y="4" width="56" height="56" rx="8" fill="#0b63a6"/>
+          <path d="M16 44 L32 20 L48 44 Z" fill="#fff"/>
+        </svg>
+        <span class="brand-title">Pixell River Financial</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#employees">Employees</a></li>
+        <li><a href="#organization">Organization</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Employee Directory</h1>
+      <p class="greeting">Welcome — browse the staff grouped by department.</p>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" role="main">
+    <h2 class="page-heading">Employee Directory</h2>
+    <!-- The employee <section> will be injected here by script.js after the page fully loads -->
+  </main>
+
+  <footer id="site-footer" role="contentinfo">
+    <p id="copyright">
+      Copyright Pixell River Financial <span id="year"></span>.
+    </p>
+  </footer>
+
+  <!-- script waits for full window.load inside script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

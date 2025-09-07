@@ -1,0 +1,70 @@
+/* Basic layout + typography */
+:root{
+  --brand:#0b63a6;
+  --muted:#6b7280;
+  --card-bg:#ffffff;
+  --page-bg:#f7f8fb;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color:#1f2937;
+  background:var(--page-bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 24px;
+  background:var(--brand);
+  color:white;
+}
+
+.brand{display:flex;align-items:center;gap:12px}
+.brand-title{font-weight:700;font-size:1.05rem}
+
+.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:16px}
+.nav-links a{color:white;text-decoration:none;font-weight:600}
+
+.hero{
+  padding:28px 24px;
+  background:linear-gradient(180deg,#e9f4ff00, #f7fbff);
+}
+.hero h1{margin:0;font-size:1.8rem}
+.greeting{margin:8px 0 0;color:var(--muted)}
+
+.container{max-width:1000px;margin:20px auto;padding:0 16px}
+
+.page-heading{font-size:1.25rem;margin-bottom:14px}
+
+/* Employee section grid */
+#employee-section{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:16px;
+}
+
+/* department card */
+.department-card{
+  border:1px solid #e1e5ea;
+  background:var(--card-bg);
+  padding:12px;
+  border-radius:8px;
+  box-shadow:0 1px 2px rgba(16,24,40,0.04);
+}
+.department-card h4{margin:0 0 8px;font-size:1.05rem}
+.department-card ul{margin:0;padding-left:20px}
+.department-card li{margin:6px 0;}
+
+/* footer */
+#site-footer{padding:18px 16px;text-align:center;color:var(--muted);margin-top:28px;}
+.error{color:#b91c1c}
+
+/* small responsive nicety */
+@media (max-width:420px){
+  .nav-links{display:none}
+}
