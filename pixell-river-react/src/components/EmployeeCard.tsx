@@ -4,8 +4,10 @@ interface EmployeeCardProps {
   name: string;
 }
 
-const EmployeeCard: React.FC<EmployeeCardProps> = ({ name }) => {
-  return <li>{name}</li>;
-};
+const EmployeeCard: React.FC<EmployeeCardProps> = ({ name }) => (
+  <li className="employee" aria-label={`Employee ${name}`}>
+    {name}
+  </li>
+);
 
 export default EmployeeCard;
