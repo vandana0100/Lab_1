@@ -1,0 +1,54 @@
+{
+  "leadership": [
+    {
+      "id": "ceo",
+      "title": "Chief Executive Officer (CEO)",
+      "name": "Sarah Mitchell",
+      "description": "The CEO is responsible for the overall strategic direction and leadership of Pixell River Financial. They oversee all operations, make high-level decisions, and represent the company to stakeholders, board members, and the public. The CEO ensures the company's mission and vision are achieved while maintaining financial stability and growth."
+    },
+    {
+      "id": "cfo",
+      "title": "Chief Financial Officer (CFO)",
+      "name": "Michael Chen",
+      "description": "The CFO manages all financial aspects of the organization including financial planning, risk management, record-keeping, and financial reporting. They oversee the finance department, ensure compliance with financial regulations, and provide strategic financial guidance to the CEO and board of directors."
+    },
+    {
+      "id": "coo",
+      "title": "Chief Operating Officer (COO)",
+      "name": "Jennifer Rodriguez",
+      "description": "The COO is responsible for the day-to-day operations of the company. They oversee operational processes, ensure efficiency across departments, implement business strategies, and coordinate between different divisions to achieve organizational goals."
+    }
+  ],
+  "management": [
+    {
+      "id": "hr-director",
+      "title": "Human Resources Director",
+      "name": "David Thompson",
+      "description": "The HR Director oversees all human resources functions including recruitment, employee relations, performance management, compensation and benefits, training and development, and compliance with employment laws. They develop HR strategies that align with business objectives."
+    },
+    {
+      "id": "it-director",
+      "title": "Information Technology Director",
+      "name": "Lisa Park",
+      "description": "The IT Director manages the organization's technology infrastructure, systems, and digital transformation initiatives. They oversee IT security, software development, network administration, and ensure technology solutions support business operations effectively."
+    },
+    {
+      "id": "operations-manager",
+      "title": "Operations Manager",
+      "name": "Robert Johnson",
+      "description": "The Operations Manager coordinates daily business operations, manages operational budgets, oversees process improvements, and ensures smooth workflow across departments. They work closely with department heads to optimize efficiency and productivity."
+    },
+    {
+      "id": "finance-manager",
+      "title": "Finance Manager",
+      "name": "Amanda Williams",
+      "description": "The Finance Manager handles financial planning, budgeting, forecasting, and financial analysis. They prepare financial reports, manage cash flow, oversee accounting operations, and provide financial insights to support business decision-making."
+    },
+    {
+      "id": "marketing-manager",
+      "title": "Marketing Manager",
+      "name": "Carlos Martinez",
+      "description": "The Marketing Manager develops and executes marketing strategies to promote the company's services, build brand awareness, and attract new clients. They manage marketing campaigns, digital presence, and coordinate with sales teams to drive business growth."
+    }
+  ]
+}

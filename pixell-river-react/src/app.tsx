@@ -1,38 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import EmployeeList from "./components/EmployeeList";
-
-
-interface EmployeeData {
-  [department: string]: string[];
-}
+import EmployeeDirectory from "./components/EmployeeDirectory";
+import Organization from "./components/Organization";
 
 const App: React.FC = () => {
-  const [data, setData] = useState<EmployeeData>({});
-
-  useEffect(() => {
-    fetch("/employees.json")
-      .then((res) => res.json())
-      .then((json) => setData(json))
-      .catch(() => console.error("Failed to load employees"));
-  }, []);
-
   return (
-    <>
-      <header>
-        <Navbar />
-        <h1>Pixell River Financial</h1>
-        <p>Welcome to the Employee and Organization Directory</p>
-      </header>
-      <main>
-        <h2>Employee Directory</h2>
-        {Object.entries(data).map(([dept, names]) => (
-          <EmployeeList key={dept} department={dept} employees={names} />
-        ))}
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <div id="app">
+        <header>
+          <Navbar />
+          <h1>Pixell River Financial</h1>
+          <p>Welcome to the Employee and Organization Directory</p>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/employees" replace />} />
+            <Route path="/employees" element={<EmployeeDirectory />} />
+            <Route path="/organization" element={<Organization />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
