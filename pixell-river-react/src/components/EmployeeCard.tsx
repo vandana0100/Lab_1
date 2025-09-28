@@ -5,10 +5,13 @@ interface EmployeeCardProps {
 }
 
 const EmployeeCard: React.FC<EmployeeCardProps> = ({ name }) => {
-  return (
-    <li className="employee" aria-label={`Employee ${name}`}>
-      {name}
-    </li>
+  return React.createElement(
+    "li",
+    {
+      className: "employee",
+      "aria-label": `Employee ${name}`
+    },
+    name
   );
 };
 
