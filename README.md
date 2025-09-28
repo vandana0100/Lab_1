@@ -59,5 +59,3 @@ pixell-river-react/
 - Try refreshing the page if something looks off
 
 ---
-
-*Built with React, TypeScript, and a lot of coffee ☕*
