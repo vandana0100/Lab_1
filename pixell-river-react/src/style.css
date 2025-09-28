@@ -87,6 +87,43 @@ main > h2{grid-column:1/-1;margin:0 0 8px 0;font-size:1.25rem}
 /* Employee directory updates */
 .employee-directory .departments-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;align-items:start}
 
+/* Navigation */
+.nav-links a.active{color:var(--brand-700);font-weight:700}
+
+/* Search functionality */
+.search-container{margin:0 24px 20px}
+.search-bar{position:relative;display:flex;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 12px;box-shadow:var(--shadow)}
+.search-icon{color:var(--muted);margin-right:8px;flex-shrink:0}
+.search-input{flex:1;border:none;outline:none;font-size:1rem;background:transparent;color:var(--text)}
+.search-input::placeholder{color:var(--muted)}
+.clear-search{background:none;border:none;color:var(--muted);cursor:pointer;padding:4px;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.clear-search:hover{color:var(--text);background:var(--border)}
+
+.search-results-info{margin:0 24px 16px;color:var(--muted);font-size:.9rem}
+
+/* Organization page */
+.organization-page{padding:16px 24px}
+.organization-page h2{margin:0 0 20px 0;font-size:1.5rem;color:var(--brand-700)}
+.leadership-section,.management-section{margin-bottom:40px}
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+
+.role-card{background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;transition:transform .12s ease,box-shadow .2s ease}
+.role-card:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(16,24,40,.08),0 12px 24px rgba(16,24,40,.08)}
+.role-header{display:flex;align-items:center;justify-content:space-between;padding:16px;cursor:pointer;transition:background-color .15s ease}
+.role-header:hover{background:#f8fafc}
+.role-header:focus{outline:2px solid var(--brand);outline-offset:-2px}
+.role-info{flex:1}
+.role-info h4{margin:0 0 4px 0;font-size:1.1rem;color:var(--brand-700)}
+.role-name{margin:0;color:var(--muted);font-size:.9rem}
+.expand-icon{color:var(--muted);transition:transform .2s ease,color .15s ease}
+.expand-icon.expanded{transform:rotate(180deg);color:var(--brand)}
+.role-description{padding:0 16px 16px;color:var(--text);line-height:1.6;border-top:1px solid var(--border);margin-top:0;animation:slideDown .2s ease}
+
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+
+/* Employee directory updates */
+.employee-directory .departments-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;align-items:start}
+
 /* Utilities */
 .visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden}
 
