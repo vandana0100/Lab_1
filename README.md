@@ -1,42 +1,63 @@
-Pixell River Financial — Lab 1
-==============================
+# Pixell River Financial - Employee Directory
 
-What is this?
--------------
-This project shows the Employee & Organization directory in two ways:
+A simple employee and organization directory built with React and TypeScript.
 
-- Plain HTML/CSS/JS: `lab1-employee-directory/`
-- React + TypeScript (Vite): `pixell-river-react/`
+## What's New ✨
 
-What you need
--------------
-- Node.js 18 or newer
-- npm
+This project now includes:
+- **Search employees** by name or department
+- **Organization page** showing leadership and management roles
+- **Navigation** between employee and organization pages
+- **Mobile-friendly** design
 
-Run the React app
--------------------------------
-1. From the project root, install packages:
+## Quick Start
 
-```
+1. Install dependencies:
+```bash
 npm install
 ```
 
-2. Start the dev server:
-
-```
+2. Start the app:
+```bash
 npm run dev
 ```
 
-3. Open the link shown in the terminal (for example `http://localhost:5174/`).
+3. Open your browser to the URL shown (usually `http://localhost:5173`)
 
+## How to Use
 
-Where is the data?
-------------------
-- React: `pixell-river-react/public/employees.json`
-- Plain HTML: `lab1-employee-directory/employees.json`
+### Employee Directory
+- Browse employees by department
+- Search for specific people or departments using the search bar
+- Results update as you type
 
-If something doesn’t work
--------------------------
-- Make sure the dev server is running (React) using a local server (plain HTML).
-- Check the browser console/network for errors loading `employees.json`.
+### Organization Page
+- View company leadership and management
+- Click on any role to see the job description
+- Click again to hide the description
 
+## Project Structure
+
+```
+pixell-river-react/
+├── public/
+│   ├── employees.json      # Employee data
+│   └── organization.json   # Organization data
+└── src/
+    ├── components/         # React components
+    ├── app.tsx            # Main app
+    └── style.css          # Styling
+```
+
+## What You Need
+- Node.js 18 or newer
+- npm
+
+## Troubleshooting
+- Make sure the dev server is running
+- Check browser console for any errors
+- Try refreshing the page if something looks off
+
+---
+
+*Built with React, TypeScript, and a lot of coffee ☕*
