@@ -36,6 +36,26 @@ npm run dev
 - Click on any role to see the job description
 - Click again to hide the description
 
+## Lab Steps Completed
+
+### Part 1: useEntryForm() Hook
+- Created custom hook to manage form state
+- Handles employee and role form data
+- Includes validation and error handling
+- Uses React useState for state management
+
+### Part 2: validStaffService
+- Created service to validate staff entries
+- Checks if names are at least 3 characters long
+- Validates employee and role data
+- Returns error messages for invalid entries
+
+### Part 3: Employee and Role Repositories
+- Created repositories for data management
+- Includes basic CRUD operations (Create, Read, Update, Delete)
+- Stores data in memory (temporary storage)
+- Can be used by hooks and services
+
 ## Project Structure
 
 ```
@@ -45,6 +65,14 @@ pixell-river-react/
 │   └── organization.json   # Organization data
 └── src/
     ├── components/         # React components
+    ├── hooks/             # Custom hooks
+    │   └── useEntryForm.ts # Form management hook
+    ├── services/          # Business logic services
+    │   ├── validationService.ts    # Form validation
+    │   └── validStaffService.ts    # Staff validation
+    ├── repositories/      # Data management
+    │   ├── employeeRepository.ts   # Employee data
+    │   └── roleRepository.ts       # Role data
     ├── app.tsx            # Main app
     └── style.css          # Styling
 ```
