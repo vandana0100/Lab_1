@@ -1,0 +1,25 @@
+// TODO: set up real database connection later
+// This is just a placeholder prisma schema for now
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite" // maybe switch to postgres later
+  url      = env("DATABASE_URL")
+}
+
+model Employee {
+  id    Int    @id @default(autoincrement())
+  name  String
+  dept  String
+  // TODO: more fields and relations later
+}
+
+model Role {
+  id    Int    @id @default(autoincrement())
+  title String
+  owner String
+  // TODO: relate back to Employee once we figure it out
+}
