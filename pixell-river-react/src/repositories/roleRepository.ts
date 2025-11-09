@@ -11,6 +11,7 @@ export interface Role {
 }
 
 export class RoleRepository {
+  // TODO: swap the in-memory array for real API calls later
   // Store roles in memory (like a simple database)
   private static roles: Role[] = [
     // We'll start with some sample data
@@ -18,6 +19,22 @@ export class RoleRepository {
     { id: '2', title: 'CFO', name: 'Michael Chen', description: 'Chief Financial Officer', type: 'leadership' },
     { id: '3', title: 'HR Director', name: 'David Thompson', description: 'Human Resources Director', type: 'management' }
   ];
+
+  // Quick helper to practice calling the backend
+  static async fetchAllRolesFromApi(): Promise<Role[]> {
+    try {
+      const response = await fetch("/api/roles");
+      if (!response.ok) {
+        throw new Error("Bad response");
+      }
+      const data = await response.json();
+      // TODO: update once backend returns actual role objects
+      return data?.roles ?? this.roles;
+    } catch (error) {
+      console.warn("TODO: handle role API error better later", error);
+      return this.roles;
+    }
+  }
 
   // Get all roles
   static getAllRoles(): Role[] {

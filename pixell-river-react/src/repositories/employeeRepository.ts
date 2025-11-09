@@ -9,6 +9,7 @@ export interface Employee {
 }
 
 export class EmployeeRepository {
+  // TODO: replace the in-memory array with API requests once backend is ready
   // Store employees in memory (like a simple database)
   private static employees: Employee[] = [
     // We'll start with some sample data
@@ -16,6 +17,22 @@ export class EmployeeRepository {
     { id: '2', name: 'Jane Smith', department: 'HR' },
     { id: '3', name: 'Bob Johnson', department: 'Finance' }
   ];
+
+  // Temporary helper to start testing API calls without breaking the app
+  static async fetchAllEmployeesFromApi(): Promise<Employee[]> {
+    try {
+      const response = await fetch("/api/employees");
+      if (!response.ok) {
+        throw new Error("Bad response");
+      }
+      const data = await response.json();
+      // TODO: shape the response once backend sends real data
+      return data?.employees ?? this.employees;
+    } catch (error) {
+      console.warn("TODO: handle API error better later", error);
+      return this.employees;
+    }
+  }
 
   // Get all employees
   static getAllEmployees(): Employee[] {
