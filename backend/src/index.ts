@@ -11,3 +11,7 @@ app.get("/health", (_req, res) => {
 app.listen(PORT, () => {
   console.log("Server kinda started on", PORT);
 });
+import employeesRouter from './routes/employees.routes';
+
+app.use('/api/employees', employeesRouter);
+
