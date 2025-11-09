@@ -36,7 +36,14 @@ npm run dev
 - Click on any role to see the job description
 - Click again to hide the description
 
-## Lab Steps Completed
+## Lab-4 Steps Completed
+
+- Started splitting the project into `frontend/` and `backend/` folders. Backend has a basic Express + TypeScript server stub with TODO comments.
+- Planning to build routes, controllers, and services that expose only the endpoints the frontend needs.
+- Need to add a database (Prisma or similar) with Employees and Roles plus a seed script.
+- Frontend repositories still use local data for now; will switch to fetch requests later.
+
+## Lab-3 
 
 ### Part 1: useEntryForm() Hook
 - Created custom hook to manage form state
@@ -59,7 +66,14 @@ npm run dev
 ## Project Structure
 
 ```
-pixell-river-react/
+frontend/
+├── TODO.txt                # Reminder to move React app here later
+backend/
+├── package.json           # Express + TypeScript placeholder setup
+├── tsconfig.json          # Basic TS config
+└── src/
+    └── index.ts          # Express server stub with TODOs
+pixell-river-react/        # Existing React app (will move under frontend later)
 ├── public/
 │   ├── employees.json      # Employee data
 │   └── organization.json   # Organization data
@@ -76,7 +90,6 @@ pixell-river-react/
     ├── app.tsx            # Main app
     └── style.css          # Styling
 ```
-
 ## What You Need
 - Node.js 18 or newer
 - npm
