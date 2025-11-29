@@ -8,6 +8,7 @@
     "start": "echo Need to compile first"
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.23",
     "express": "^4.19.2"
   },
   "devDependencies": {
