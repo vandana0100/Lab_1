@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useUser, SignInButton, SignOutButton } from "@clerk/clerk-react";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const { isSignedIn } = useUser();
 
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
@@ -29,6 +31,21 @@ const Navbar: React.FC = () => {
           >
             Organization
           </Link>
+        </li>
+        <li>
+          {isSignedIn ? (
+            <SignOutButton>
+              <button style={{background:"none",border:"none",color:"inherit",cursor:"pointer",fontWeight:600}}>
+                Logout
+              </button>
+            </SignOutButton>
+          ) : (
+            <SignInButton>
+              <button style={{background:"none",border:"none",color:"inherit",cursor:"pointer",fontWeight:600}}>
+                Login
+              </button>
+            </SignInButton>
+          )}
         </li>
       </ul>
     </nav>
